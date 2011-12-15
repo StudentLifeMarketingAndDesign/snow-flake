@@ -35,7 +35,7 @@ class Page_Controller extends ContentController {
 	
 	public function SnowFlakes(){
 	
-		$set = DataObject::get("SnowFlakeEntryPage", $filter = null, $sort = "RAND()", $join = null, $limit = "23");
+		$set = DataObject::get("SnowFlakeEntryPage", $filter = null, $sort = "RAND()", $join = null, $limit = "24");
 			if($set){
 				return $set;
 			}

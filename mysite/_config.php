@@ -7,9 +7,9 @@ global $databaseConfig;
 $databaseConfig = array(
 	"type" => 'MySQLDatabase',
 	"server" => 'koko.imu.uiowa.edu',
-	"username" => 'greeting',
-	"password" => 'dRaWuw22',
-	"database" => 'greeting',
+	"username" => 'dsl_snowflake',
+	"password" => 'pRuTAs29',
+	"database" => 'dsl_snowflake',
 	"path" => '',
 );
 

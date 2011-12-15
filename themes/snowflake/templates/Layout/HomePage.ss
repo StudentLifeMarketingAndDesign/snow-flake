@@ -9,24 +9,36 @@
 		<ul>
 			<li class="download"><a href="{$BaseHref}assets/i-snowflake.pdf"><strong>Download</strong> Click here to download the PDF template.</a></li>
 			<li class="create"><strong>Create</strong> Print, fold and cut out your snowflake.</a></li>
-			<li class="share last"><a href="./submission-form/" id="snowflakeform" class="iframe" ><strong>Share</strong> Snap a photo and click here to share with us!</a></li>
+			<li class="share last"><a href="./submission-form/" class="fancybox.iframe snowflakeform" ><strong>Share</strong> Snap a photo and click here to share it with us!</a></li>
 		</ul>
 	</div>
 	<div id="share">
 	<a name="snowflakes"></a>
+
 		<h2>Your Iowa Snowflakes</h2>
+		<div id="homepage-nav-container">
+<ul id="homepage-nav">
+			<li><a href="./list">See All Snowflakes</a></li>
+			<li><a href="./submission-form/" id="snowflakeform2" class="fancybox.iframe snowflakeform" >Share Yours!</a></li>
+</ul>
+<!-- AddThis Button BEGIN -->
+<div class="addthis_toolbox addthis_default_style addthis_32x32_style">
+<a class="addthis_button_preferred_1"></a>
+<a class="addthis_button_preferred_2"></a>
+<a class="addthis_button_preferred_3"></a>
+<a class="addthis_button_preferred_4"></a>
+<a class="addthis_button_compact"></a>
+<a class="addthis_counter addthis_bubble_style"></a>
+</div>
+<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=xa-4ee119ba73961338"></script>
+<!-- AddThis Button END -->
+<div class="clear"></div> 
+</div>		<div class="clear"></div>
 		<ul id="share-images">
-			<li><a href="/snowflake/assets/sallysnowflake_full.jpg"><img src="/snowflake/assets/sallysnowflake_cropped.jpg"></a></li> 
 			<% control SnowFlakes %>
-			<li><a href="<% control Image %>$SetWidth(450).URL<% end_control %>"><img src="<% control Image %>$CroppedImage(130,130).URL<% end_control %>"></a></li>
+			<li><a href="$Link" class="fancybox.iframe" rel="snowflakes"><img src="<% control Image %>$CroppedImage(130,130).URL<% end_control %>"></a></li>
 			<% end_control %>
 		</ul>
-		<ul id="share-links">
-			<li><a href="./list">See all photos</a></li>
-			<li><a href="./submission-form/" id="snowflakeform2" class="iframe" >Share your photo</a></li>
-		</ul>
+
 	</div>
-	<div id="footer">
-		<div class="logo"><a href="http://www.uiowa.edu/president"><img src="{$ThemeDir}/images/ui_logo.png" alt="The University of Iowa Logo" align="left" /></a></div>
-		<p>&copy;$Now.Year The University of Iowa. Site by IMU Marketing &amp; Design</p>
-	</div>
+	<% include Footer %>

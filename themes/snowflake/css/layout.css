@@ -300,7 +300,10 @@ caption {
 #header {
   padding-top: 70px;
   height: 110px; }
+#header-container {
+	text-align: center;
 
+}
 #video {
   height: 505px; }
 
@@ -371,6 +374,11 @@ body {
     overflow: hidden;
     padding-top: 28px;
     background: url("../images/h2-your_snowflakes.png") no-repeat top center; }
+    
+    #share.full-listing h2 {
+    	margin: 0px 0 15px 0;
+    
+    }
   #share ul#share-images {
     margin: 0;
     padding: 15px 0 0 0;
@@ -385,23 +393,23 @@ body {
         width: 130px;
         margin: 0;
         padding: 0; }
-      #share ul#share-images li img {
+      #share ul#share-images li img, .individual-image{
         -moz-box-shadow: 0px 2px 5px #666;
         -webkit-box-shadow: 0px 2px 5px #666;
         box-shadow: 0px 2px 5px #666; }
         
         
-  #share ul#share-links {
+  #share ul#share-links, #individual-nav, #homepage-nav {
     clear: both;
     margin: 0 0 0 212px;
     padding: 0;
     list-style: none;
     text-align: center; }
-    #share ul#share-links li {
+    #share ul#share-links li, #individual-nav li, #homepage-nav li {
       width: 200px;
       float: left;
       margin-left: 10px; }
-      #share ul#share-links li a {
+      #share ul#share-links li a, #individual-nav li a, #homepage-nav li a {
         display: block;
         background-color: #fff1bd;
         padding: 6px;
@@ -412,8 +420,73 @@ body {
 		margin-left: 317px;
    }
       
-        
-     
+#homepage-nav {
+	margin: 0 0 0 85px;
+
+}  
+
+#homepage-nav-container .addthis_toolbox {
+	margin-left: 10px;
+	display: inline;
+	float: left;
+	width:300px;
+
+}
+#individual-nav {
+	margin: 0;
+}
+
+#individual-nav li.single-nav-link {
+	margin-left: 325px;
+
+
+}
+
+#individual-nav-container input {
+	float: left;
+	height: 30px;
+	width: 130px;
+	font-size: 14px;
+	margin: 0 15px;
+
+}
+#individual-nav-container {
+	padding: 10px 0;
+	/*margin: 20px 0;*/
+	margin-bottom: 20px;
+	border-top: 1px solid #FFF1BD;
+	border-bottom: 1px solid #FFF1BD;
+	background: #FFE27A;
+}
+
+#homepage-nav-container {
+	padding: 10px 0;
+	/*margin: 20px 0;*/
+	margin-bottom: 20px;
+}
+
+#individual-image-container {
+	text-align: center;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #FFF1BD;
+}
+
+#individual-image-container .previous {
+	/*position: absolute;
+	top: 400px;
+	margin-right: 25px;*/
+	margin-top: 15%;
+	float: left;
+}
+
+#individual-image-container .next {
+	/*position: absolute;
+	top: 400px;
+	margin-left: 125px;*/
+	margin-top: 15%;
+	float: right;
+
+}
 
 #footer {
   padding-top: 20px;
@@ -422,7 +495,14 @@ body {
     float: left; }
   #footer p {
     font-size: 0.8em;
-    text-align: right; }
+    text-align: right;
+    display: block;
+     }
   #footer img {
     position: relative;
     margin-top: -10px; }
+    
+.dos-logo {
+	float: right;
+} 
+

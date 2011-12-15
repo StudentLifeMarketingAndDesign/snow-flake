@@ -96,19 +96,21 @@ class SnowFlakeEntryFormPage_Controller extends ContentController {
 		//$entry->publish("Stage","Live");
 		
 		Session::set('ActionStatus', 'success'); 
-		Session::set('ActionMessage', 'Thanks for submitting your snowflake! Check this site to see your snowflake soon!');
+		Session::set('ActionMessage', '<p>Thanks for submitting your snowflake! Check this site to see your snowflake soon!</p>');
 		
 	//Email notification
 		$image_file = DataObject::get_one("File", "`ID` = '{$entry->ImageID}'");
 		
 		$from = "Snowflake Submissions";
-		$to = "ann-goff@uiowa.edu, bret-gothe@uiowa.edu, dustin-quam@uiowa.edu";
+		//$to = "ann-goff@uiowa.edu, bret-gothe@uiowa.edu, dustin-quam@uiowa.edu";
+		//$to = "bret-gothe@uiowa.edu, dustin-quam@uiowa.edu";
+		$to = "dustin-quam@uiowa.edu";
 		$subject = "New Snowflake Submission";
 		$body = '<p>A new snowflake photo has been submitted!</p>
 
 				<p><a href="'.$image_file->getURL().'">This is the image that was submitted.</a> </p>
 				
-				<p><a href="http://president.uiowa.edu/snowflake/admin/show/'.$entry->ID.'">Approve it (or don\'t) here</a></p>
+				<p><a href="http://studentlife.uiowa.edu/snowflake/admin/show/'.$entry->ID.'">Approve it (or don\'t) here</a></p>
 				';
 			
 		
