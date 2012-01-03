@@ -43,7 +43,7 @@ class Page_Controller extends ContentController {
 		
 	public function AllSnowFlakes(){
 	
-		$set = DataObject::get("SnowFlakeEntryPage");
+		$set = DataObject::get("SnowFlakeEntryPage", $filter = null, $sort = "ID DESC");
 			if($set){
 				return $set;
 			}

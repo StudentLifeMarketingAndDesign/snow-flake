@@ -104,7 +104,7 @@ class SnowFlakeEntryFormPage_Controller extends ContentController {
 		$from = "Snowflake Submissions";
 		//$to = "ann-goff@uiowa.edu, bret-gothe@uiowa.edu, dustin-quam@uiowa.edu";
 		//$to = "bret-gothe@uiowa.edu, dustin-quam@uiowa.edu";
-		$to = "dustin-quam@uiowa.edu";
+		$to = "dustin-quam@uiowa.edu, benjamin-lewis@uiowa.edu";
 		$subject = "New Snowflake Submission";
 		$body = '<p>A new snowflake photo has been submitted!</p>
 
