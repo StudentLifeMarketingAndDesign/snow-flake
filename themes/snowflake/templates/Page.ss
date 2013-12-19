@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
   <title>Season's Greetings from The University of Iowa!</title>
-  <meta name="description" content="2011 Season's Greetings from The University of Iowa">
-  <meta name="author" content="IMU Marketing &amp; Design">
+  <meta name="description" content="Season's Greetings from The University of Iowa! Make your own snowflake and share it with us!">
+  <meta name="author" content="Student Life Marketing &amp; Design">
 
   <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
 	<% require themedCSS(layout) %> 

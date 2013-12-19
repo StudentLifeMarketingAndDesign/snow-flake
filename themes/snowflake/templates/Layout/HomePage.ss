@@ -1,15 +1,15 @@
 <div id="header">
 		<h1>Season's Greetings from Sally and Ken Mason</h1>
 	</div>
-	<div id="video">
-		<object width="853" height="505"><param name="movie" value="http://www.youtube.com/v/AWh439L4MmE?fs=1&amp;hl=en_US&amp;rel=0"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/AWh439L4MmE?fs=1&amp;hl=en_US&amp;rel=0" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="853" height="505"></embed></object>
-	</div>
+<div id="video">
+	<iframe width="853" height="505" src="//www.youtube.com/embed/AWh439L4MmE" frameborder="0" allowfullscreen></iframe>
+</div>
 	<div id="instructions">
 		<h2>Create Your Own University of Iowa Snowflake</h2>
 		<ul>
 			<li class="download"><a href="{$BaseHref}assets/i-snowflake.pdf"><strong>Download</strong> Click here to download the PDF template.</a></li>
 			<li class="create"><strong>Create</strong> Print, fold and cut out your snowflake.</a></li>
-			<li class="share last"><a href="./submission-form/" class="fancybox.iframe snowflakeform" ><strong>Share</strong> Snap a photo and click here to share it with us!</a></li>
+			<li class="share last"><a href="./submission-form/" class="fancybox.iframe snowflakeform" ><strong>Upload</strong> Share your snowflake with the tag <a href="https://twitter.com/search?q=%23iowasnowflake&src=typd">#iowasnowflake</a></li>
 		</ul>
 	</div>
 	<div id="share">
@@ -19,7 +19,7 @@
 		<div id="homepage-nav-container">
 <ul id="homepage-nav">
 			<li><a href="./list">See All Snowflakes</a></li>
-			<li><a href="./submission-form/" id="snowflakeform2" class="fancybox.iframe snowflakeform" >Share Yours!</a></li>
+			<li><a href="./submission-form/" id="snowflakeform2" class="fancybox.iframe snowflakeform" >Upload Your Snowflake!</a></li>
 </ul>
 <!-- AddThis Button BEGIN -->
 <div class="addthis_toolbox addthis_default_style addthis_32x32_style">

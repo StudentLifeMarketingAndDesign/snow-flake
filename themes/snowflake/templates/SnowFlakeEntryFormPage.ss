@@ -116,7 +116,7 @@
 <body>
 
 <div id="container">
-<h1>Share Your Snowflake With The World!</h1>
+<h1>Upload Your Snowflake</h1>
 <% if StatusMessage %> 
 <% control StatusMessage %> 
 <div id="message-container">

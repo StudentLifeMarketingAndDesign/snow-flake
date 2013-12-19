@@ -50,6 +50,8 @@ class SnowFlakeEntryPage_Controller extends Page_Controller {
 	 * @var array
 	 */
 	public static $allowed_actions = array (
+		"Form"
+	
 	);
 
 	public function init() {

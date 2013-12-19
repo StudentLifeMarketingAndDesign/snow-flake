@@ -36,6 +36,7 @@ class SnowFlakeEntryFormPage_Controller extends ContentController {
 	 * @var array
 	 */
 	public static $allowed_actions = array (
+		"Form"
 	);
 
 	public function init() {
@@ -43,7 +44,7 @@ class SnowFlakeEntryFormPage_Controller extends ContentController {
 
 	}
 	
-	function Form() {
+	public function Form() {
 		
 		$recaptchaField = new RecaptchaField('MyCaptcha');
 		//$recaptchaField->jsOptions = array('theme' => 'clean'); // optional
@@ -65,7 +66,7 @@ class SnowFlakeEntryFormPage_Controller extends ContentController {
 		), new FieldSet(
  
 			// List the action buttons here
-			new FormAction("SignupAction", "Submit your snowflake!")
+			new FormAction("SignupAction", "Upload")
  
 		), new RequiredFields(
  

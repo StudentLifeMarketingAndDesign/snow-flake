@@ -5,9 +5,9 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-  <title>Snowflake Photo</title>
-  <meta name="description" content="2011 Season's Greetings from The University of Iowa">
-  <meta name="author" content="IMU Marketing &amp; Design">
+  <title>University of Iowa Snowflake #iowasnowflake</title>
+  <meta name="description" content="Seasons Greetings from The University of Iowa #iowasnowflake">
+  <meta name="author" content="Student Life Marketing &amp; Design">
 	<% require themedCSS(layout) %> 
 
 
@@ -29,7 +29,7 @@
 <div id="individual-nav-container">
 <ul id="individual-nav">
 			<li><a href="./list">See All Snowflakes</a></li>
-			<li><a href="./#instructions" id="snowflakeform2" class="fancybox.iframe" >Share Yours!</a></li>
+			<li><a href="./#instructions" id="snowflakeform2" class="fancybox.iframe" >Upload Your Snowflake!</a></li>
 </ul>
 
 <input type="text" name="fname" value="$AbsoluteLink" placeholder="tests" />
