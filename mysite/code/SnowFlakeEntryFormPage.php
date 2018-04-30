@@ -118,7 +118,7 @@ class SnowFlakeEntryFormPage_Controller extends ContentController {
 
 				<p><a href="'.$image_file->getURL().'">This is the image that was submitted.</a> </p>
 				
-				<p><a href="http://studentlife.uiowa.edu/snowflake/admin/pages/edit/'.$entry->ID.'">Approve it (or don\'t) here</a></p>
+				<p><a href="http://studentlife.uiowa.edu/snowflake/admin/pages/edit/show/'.$entry->ID.'">Approve it (or don\'t) here</a></p>
 				';
 			
 		
