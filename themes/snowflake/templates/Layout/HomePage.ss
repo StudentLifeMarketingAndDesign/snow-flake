@@ -35,9 +35,9 @@
 <div class="clear"></div> 
 </div>		<div class="clear"></div>
 		<ul id="share-images">
-			<% control SnowFlakes %>
-			<li><a href="$Link" class="fancybox.iframe" rel="snowflakes"><img src="<% control Image %>$CroppedImage(130,130).URL<% end_control %>"></a></li>
-			<% end_control %>
+			<% loop SnowFlakes %>
+			<li><a href="$Link" class="fancybox.iframe" rel="snowflakes"><img src="<% loop Image %>$CroppedImage(130,130).URL<% end_loop %>"></a></li>
+			<% end_loop %>
 		</ul>
 
 	</div>

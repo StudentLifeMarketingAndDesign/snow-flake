@@ -1,32 +1,34 @@
 <?php
 class SnowFlakeEntryPage extends SiteTree {
 
-	public static $db = array(
+	private static $db = array(
 	/*	"FirstName" => "Text",
 		"LastName" => "Text",
 		"Email" => "Text",*/
 	);
 
-	public static $has_one = array(
+	private static $has_one = array(
 		"Image" => "Image"
 	
 	);
 	
 	
-	function getCMSFields() {
+	public function getCMSFields() {
 		$fields = parent::getCMSFields();
-		$fields->removeFieldFromTab("Root.Content.Main","Content");
+		$fields->removeFieldFromTab("Root.Main","Content");
 		
 		
-		$fields->addFieldToTab('Root.Content.Main', new ImageField('Image', 'Snow Flake Image'));
-		/*$fields->addFieldToTab('Root.Content.Main', new HTMLEditorField('Content', 'Content'));*/
+		$fields->addFieldToTab('Root.Main', $uploadField = new UploadField('Image', 'Snow Flake Image'));
+		/*$fields->addFieldToTab('Root.Main', new HTMLEditorField('Content', 'Content'));*/
 		
-		
+		$uploadfield->setCanAttachExisting(false); // Block access to SilverStripe assets library
+        $uploadfield->setCanPreviewFolder(false); // Don't show target filesystem folder on upload field
+        $uploadfield->relationAutoSetting = false; // Prevents the form thinking the GalleryPage is the underlying object
 		
 		$image_file = DataObject::get_one("File", "`ID` = '{$this->ImageID}'");
 		
 		if($image_file){
-		$fields->addFieldToTab("Root.Content.Main", new LiteralField("ImageLabel", '<a href="'.$image_file->getURL().'" target="_blank">Full-sized Image</a>'));}
+		$fields->addFieldToTab("Root.Main", new LiteralField("ImageLabel", '<a href="'.$image_file->getURL().'" target="_blank">Full-sized Image</a>'));}
 		//print_r($image_file);
 		return $fields;
 	}
@@ -49,7 +51,7 @@ class SnowFlakeEntryPage_Controller extends Page_Controller {
 	 *
 	 * @var array
 	 */
-	public static $allowed_actions = array (
+	private static $allowed_actions = array (
 		"Form"
 	
 	);

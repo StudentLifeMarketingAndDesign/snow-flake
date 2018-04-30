@@ -49,11 +49,11 @@
 	</head>
 <body>
 <% if StatusMessage %> 
-<% control StatusMessage %> 
+<% loop StatusMessage %> 
 
 $Message 
 
-<% end_control %> 
+<% end_loop %> 
 <% end_if %>
 $Form
 </body>

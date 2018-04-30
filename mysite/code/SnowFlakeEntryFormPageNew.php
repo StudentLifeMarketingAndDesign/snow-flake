@@ -11,7 +11,7 @@ class SnowFlakeEntryFormPageNew extends SiteTree {
 	);
 	
 	
-	function getCMSFields() {
+	public function getCMSFields() {
 		$fields = parent::getCMSFields();
 
 		return $fields;
@@ -43,7 +43,7 @@ class SnowFlakeEntryFormPageNew_Controller extends ContentController {
 
 	}
 	
-	function Form() {
+	public function Form() {
 		
 		$recaptchaField = new RecaptchaField('MyCaptcha');
 		//$recaptchaField->jsOptions = array('theme' => 'clean'); // optional
@@ -77,7 +77,7 @@ class SnowFlakeEntryFormPageNew_Controller extends ContentController {
 	/**
 	* This function is called when the user submits the form.
 	*/
-	function SignupAction($data, $form) {
+	public function SignupAction($data, $form) {
  
 		
 		// Create a new object and load the form data into it
@@ -106,7 +106,7 @@ class SnowFlakeEntryFormPageNew_Controller extends ContentController {
  
 	}
 	
-	function StatusMessage() { 
+	public function StatusMessage() { 
 	   if(Session::get('ActionMessage')) { 
 	      $message = Session::get('ActionMessage'); 
 	      $status = Session::get('ActionStatus');

@@ -1,17 +1,17 @@
 <?php
 class SnowFlakeEntryFormPage extends SiteTree {
 
-	public static $db = array(
+	private static $db = array(
 
 	);
 
-	public static $has_one = array(
+	private static $has_one = array(
 
 	
 	);
 	
 	
-	function getCMSFields() {
+	public function getCMSFields() {
 		$fields = parent::getCMSFields();
 
 		return $fields;
@@ -35,7 +35,7 @@ class SnowFlakeEntryFormPage_Controller extends ContentController {
 	 *
 	 * @var array
 	 */
-	public static $allowed_actions = array (
+	private static $allowed_actions = array (
 		"Form"
 	);
 
@@ -46,10 +46,15 @@ class SnowFlakeEntryFormPage_Controller extends ContentController {
 	
 	public function Form() {
 		
-		$recaptchaField = new RecaptchaField('MyCaptcha');
+		$recaptchaField = new NocaptchaField('MyCaptcha');
 		//$recaptchaField->jsOptions = array('theme' => 'clean'); // optional
+		$uploadField = new UploadField("Image", "Upload your snowflake photo (in jpg, gif, or png) below! If your snowflake picture is bigger than 1.5 MB, please make it smaller before submitting it. ");
 
-		return new Form($this, "Form", new FieldSet(
+
+		$uploadField->setCanAttachExisting(false); // Block access to SilverStripe assets library
+        $uploadField->setCanPreviewFolder(false); // Don't show target filesystem folder on upload field
+        $uploadField->relationAutoSetting = false; // Prevents the form thinking the GalleryPage is the underlying object
+		return new Form($this, "Form", new FieldList(
  
 			// List your fields here
 			
@@ -57,13 +62,12 @@ class SnowFlakeEntryFormPage_Controller extends ContentController {
 			/*new TextField("FirstName", "First name"),
 			new TextField("LastName", "Last Name"),
 			new EmailField("Email", "Email address"),*/
-			new SimpleImageField("Image", "Upload your snowflake photo (in jpg, gif, or png) below! If your snowflake picture is bigger than 1.5 MB, please make it smaller before submitting it. ")
-			
+			$uploadField 
 			, $recaptchaField
 					
 			/*new OptionsetField("CurrentStudent", "Are you a current student at The University of Iowa?", array("yes"=>"Yes", "no"=>"No"),"yes")*/
  
-		), new FieldSet(
+		), new FieldList(
  
 			// List the action buttons here
 			new FormAction("SignupAction", "Upload")
@@ -73,12 +77,14 @@ class SnowFlakeEntryFormPage_Controller extends ContentController {
 			 "Image"
  
 		));
+
+		
 	}
  
 	/**
 	* This function is called when the user submits the form.
 	*/
-	function SignupAction($data, $form) {
+	public function SignupAction($data, $form) {
  
 		
 		// Create a new object and load the form data into it
@@ -121,11 +127,11 @@ class SnowFlakeEntryFormPage_Controller extends ContentController {
 		$email->send();
 		
 		//print_r($form);
-		Director::redirectBack();
+		Director::redirect('/home');
  
 	}
 	
-	function StatusMessage() { 
+	public function StatusMessage() { 
 	   if(Session::get('ActionMessage')) { 
 	      $message = Session::get('ActionMessage'); 
 	      $status = Session::get('ActionStatus');

@@ -118,12 +118,12 @@
 <div id="container">
 <h1>Upload Your Snowflake</h1>
 <% if StatusMessage %> 
-<% control StatusMessage %> 
+<% loop StatusMessage %> 
 <div id="message-container">
 <p>$Message</p>
 <a href="#" onClick="parent.$.fancybox.close()" class="button">Close This</a>
 </div>
-<% end_control %> 
+<% end_loop %> 
 
 <% else %>
 $Form
@@ -132,5 +132,6 @@ $Form
 
 
 </div>
+$Analytics
 </body>
 </html>

@@ -49,25 +49,25 @@
 </div>
 
 <div id="individual-image-container">
-	<% control PrevNextPage(prev) %>
+	<% loop PrevNextPage(prev) %>
 		<% if Link %>
 	      <a href="$Link" title="Go to $Title"><img src="{$ThemeDir}/images/prev.png" class="previous" /></a> 
 	     <% end_if %>  
-	<% end_control %>
+	<% end_loop %>
 	
-	<img src="<% control Image.SetWidth(500) %>$URL<% end_control %>" width="500" class="individual-image" />
+	<img src="<% loop Image.SetWidth(500) %>$URL<% end_loop %>" width="500" class="individual-image" />
 	
-	<% control PrevNextPage(next) %>   
+	<% loop PrevNextPage(next) %>   
 		<% if Link %>           
 	      <a href="$Link" title="Go to $Title"><img src="{$ThemeDir}/images/next.png" class="next" /> </a>
 	     <% end_if %>
-	<% end_control %>
+	<% end_loop %>
 	
 </div>	
 	<% include Footer %>
 </div>
 
 
-
+$Analytics
 </body>
 </html>
