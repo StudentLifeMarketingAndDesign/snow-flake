@@ -1,2 +1,4 @@
 FormSpamProtectionExtension:
     default_spam_protector: NocaptchaProtector
+Email:
+  admin_email: imu-web@uiowa.edu

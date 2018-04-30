@@ -48,12 +48,12 @@ class SnowFlakeEntryFormPage_Controller extends ContentController {
 		
 		$recaptchaField = new NocaptchaField('MyCaptcha');
 		//$recaptchaField->jsOptions = array('theme' => 'clean'); // optional
-		$uploadField = new UploadField("Image", "Upload your snowflake photo (in jpg, gif, or png) below! If your snowflake picture is bigger than 1.5 MB, please make it smaller before submitting it. ");
+		$uploadField = new FileField("Image", "Upload your snowflake photo (in jpg, gif, or png) below! If your snowflake picture is bigger than 1.5 MB, please make it smaller before submitting it. ");
 
 
-		$uploadField->setCanAttachExisting(false); // Block access to SilverStripe assets library
-        $uploadField->setCanPreviewFolder(false); // Don't show target filesystem folder on upload field
-        $uploadField->relationAutoSetting = false; // Prevents the form thinking the GalleryPage is the underlying object
+		// $uploadField->setCanAttachExisting(false); // Block access to SilverStripe assets library
+  //       $uploadField->setCanPreviewFolder(false); // Don't show target filesystem folder on upload field
+  //       $uploadField->relationAutoSetting = false; // Prevents the form thinking the GalleryPage is the underlying object
 		return new Form($this, "Form", new FieldList(
  
 			// List your fields here
