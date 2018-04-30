@@ -118,12 +118,12 @@
 <div id="container">
 <h1>Upload Your Snowflake</h1>
 <% if StatusMessage %> 
-<% loop StatusMessage %> 
+<% with StatusMessage %> 
 <div id="message-container">
 <p>$Message</p>
 <a href="#" onClick="parent.$.fancybox.close()" class="button">Close This</a>
 </div>
-<% end_loop %> 
+<% end_with %> 
 
 <% else %>
 $Form

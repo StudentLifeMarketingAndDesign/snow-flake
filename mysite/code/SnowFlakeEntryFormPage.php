@@ -128,7 +128,7 @@ class SnowFlakeEntryFormPage_Controller extends ContentController {
 		$email->send();
 		
 		//print_r($form);
-		$this->redirect('/snowflake');
+		$this->redirect('/snowflake/submissions');
  
 	}
 	
