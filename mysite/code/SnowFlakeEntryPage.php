@@ -20,11 +20,7 @@ class SnowFlakeEntryPage extends SiteTree {
 		
 		$fields->addFieldToTab('Root.Main', $uploadField = new UploadField('Image', 'Snow Flake Image'));
 		/*$fields->addFieldToTab('Root.Main', new HTMLEditorField('Content', 'Content'));*/
-		
-		$uploadfield->setCanAttachExisting(false); // Block access to SilverStripe assets library
-        $uploadfield->setCanPreviewFolder(false); // Don't show target filesystem folder on upload field
-        $uploadfield->relationAutoSetting = false; // Prevents the form thinking the GalleryPage is the underlying object
-		
+
 		$image_file = DataObject::get_one("File", "`ID` = '{$this->ImageID}'");
 		
 		if($image_file){

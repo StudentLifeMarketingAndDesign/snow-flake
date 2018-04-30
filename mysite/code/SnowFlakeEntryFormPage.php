@@ -107,8 +107,9 @@ class SnowFlakeEntryFormPage_Controller extends ContentController {
 		
 	//Email notification
 		$image_file = DataObject::get_one("File", "`ID` = '{$entry->ImageID}'");
-		
-		$from = "Snowflake Submissions";
+		$adminEmailAddress = Config::inst()->get('email', 'admin_email');
+
+		$from = $adminEmailAddress;
 		//$to = "ann-goff@uiowa.edu, bret-gothe@uiowa.edu, dustin-quam@uiowa.edu";
 		//$to = "bret-gothe@uiowa.edu, dustin-quam@uiowa.edu";
 		$to = "dustin-quam@uiowa.edu, benjamin-lewis@uiowa.edu";
@@ -117,7 +118,7 @@ class SnowFlakeEntryFormPage_Controller extends ContentController {
 
 				<p><a href="'.$image_file->getURL().'">This is the image that was submitted.</a> </p>
 				
-				<p><a href="http://studentlife.uiowa.edu/snowflake/admin/show/'.$entry->ID.'">Approve it (or don\'t) here</a></p>
+				<p><a href="http://studentlife.uiowa.edu/snowflake/admin/pages/edit/'.$entry->ID.'">Approve it (or don\'t) here</a></p>
 				';
 			
 		
